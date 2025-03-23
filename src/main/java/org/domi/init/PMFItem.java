@@ -14,7 +14,7 @@ public class PMFItem extends Item {
         super(properties);
     }
 
-    // 아이템 등록 헬퍼 메소드
+    // 아이템 등록 용
     protected static RegistryObject<Item> registerItem(String name) {
         return ITEMS.register(name, () -> new PMFItem(new Item.Properties()));
     }
