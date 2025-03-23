@@ -1,4 +1,4 @@
-﻿package org.domi.init;
+package org.domi.init;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +18,5 @@ public class PMFItem extends Item {
     protected static RegistryObject<Item> registerItem(String name) {
         return ITEMS.register(name, () -> new PMFItem(new Item.Properties()));
     }
-
-
 
 }

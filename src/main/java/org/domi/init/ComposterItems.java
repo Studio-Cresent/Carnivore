@@ -1,4 +1,4 @@
-﻿package org.domi.init;
+package org.domi.init;
 
 public class ComposterItems {
     public static void register(){

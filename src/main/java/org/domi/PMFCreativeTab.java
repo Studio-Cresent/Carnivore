@@ -1,4 +1,4 @@
-﻿package org.domi;
+package org.domi;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -20,12 +20,10 @@ public class PMFCreativeTab {
 
     public static final RegistryObject<CreativeModeTab> PMF_Tab = CREATIVE_TABS.register("pmf_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(PMFItemList.TEST_ITEM.get()))
+                    .icon(() -> new ItemStack(PMFItemList.MUSHROOM_BURGER.get()))
                     .title(Component.translatable("itemGroup." + Pmf.MODID + ".pmf_tab"))
                     .build()
     );
-
-
 
     public static void initialize(IEventBus eventBus) {
         CREATIVE_TABS.register(eventBus); // 탭 등록
