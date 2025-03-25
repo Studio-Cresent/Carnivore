@@ -7,6 +7,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.domi.init.PMFEventHandler;
 import org.domi.init.PMFItemList;
 
 
@@ -26,6 +27,7 @@ public class Pmf {
     private void setup(IEventBus eventBus){
         PMFItemList.register(eventBus);
         PMFCreativeTab.initialize(eventBus);
+        PMFEventHandler.register(eventBus);
         //왜 등록이 안됨???????????????
         eventBus.addListener(PMFCreativeTab::addItemsToTabs);
     }
