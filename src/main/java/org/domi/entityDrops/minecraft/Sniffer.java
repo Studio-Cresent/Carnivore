@@ -8,6 +8,6 @@ import org.domi.init.itemlists.PMFItemList;
 public class Sniffer {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
-        EntityDropUtil.entityDrop(event, "minecraft:sniffer", PMFItemList.SNIFFER_MEAT, 1, 3);
+        EntityDropUtil.entityDrop(event, "minecraft:sniffer", PMFItemList.RAW_SNIFFER_MEAT, 1, 3);
     }
 }

@@ -1,6 +1,14 @@
 ﻿{
   "item.pmf.mushroom_burger": "버섯 버거",
-  "item.pmf.ikek": "익윽",
   "itemGroup.pmf.pmf_tab": "PMF",
-  "item.pmf.pumpkin_soup": "호박 수프"
+  "item.pmf.pumpkin_soup": "호박 수프",
+  "item.pmf.raw_mycelium_beef": "안 익은 버섯 스테이크",
+  "item.pmf.mycelium_steak": "구운 버섯 스테이크",
+  "item.pmf.raw_sniffer_meat": "안 익은 스니퍼 고기",
+  "item.pmf.cooked_sniffer_meat": "익은 스니퍼 고기",
+  "item.pmf.tadpole": "올챙이",
+  "item.pmf.squid_tentacle": "오징어 다리",
+  "item.pmf.glow_squid_tentacle": "발광 오징어 다리",
+  "item.pmf.golden_squid_tentacle": "금 오징어 다리",
+  "item.pmf.cooked_rabbit_foot": "익은 토끼 발"
 }

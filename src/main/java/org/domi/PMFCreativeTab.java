@@ -10,7 +10,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.domi.init.items.PMFItem;
-import org.domi.init.itemlists.PMFItemList;
+
+import static org.domi.init.itemlists.PMFItemList.TAB_ICON_ITEM;
 
 
 public class PMFCreativeTab {
@@ -20,7 +21,7 @@ public class PMFCreativeTab {
 
     public static final RegistryObject<CreativeModeTab> PMF_Tab = CREATIVE_TABS.register("pmf_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(PMFItemList.MUSHROOM_BURGER.get()))
+                    .icon(() -> new ItemStack(TAB_ICON_ITEM.get()))
                     .title(Component.translatable("itemGroup." + PMF.MODID + ".pmf_tab"))
                     .build()
     );
@@ -35,9 +36,11 @@ public class PMFCreativeTab {
         // 그냥 다 추가하자ㅏㅏ 코드는 깔끔하게ㅔ
         if (event.getTabKey() == PMF_Tab.getKey()) {
             for (RegistryObject<Item> item : PMFItem.ITEMS.getEntries()) {
-                event.accept(item.get());
+                // 아이콘으로 사용하는 아이템만 제외
+                if (item.get() != TAB_ICON_ITEM.get()) {
+                    event.accept(item.get());
+                }
             }
         }
     }
-
 }

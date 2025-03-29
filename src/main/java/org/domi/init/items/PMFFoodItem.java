@@ -1,6 +1,7 @@
 package org.domi.init.items;
 
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 import net.minecraft.world.item.Item;
@@ -26,7 +27,7 @@ public class PMFFoodItem extends PMFItem {
     /**
      * 먹으면 효과 걸리는 음식
      */
-    protected static RegistryObject<Item> registerFoodWithEffect(String name, int hunger, float saturation, MobEffectInstance effect, float probability) {
+    public static RegistryObject<Item> registerFoodWithEffect(String name, int hunger, float saturation, MobEffectInstance effect, float probability) {
         return ITEMS.register(name, () -> new PMFFoodItem(new Item.Properties()
                 .food(new FoodProperties.Builder()
                         .nutrition(hunger)
@@ -34,6 +35,20 @@ public class PMFFoodItem extends PMFItem {
                         .effect(effect, probability)
                         .build())));
     }
+
+    /**
+     * 여러 효과가 걸리는 음식
+     */
+    public static RegistryObject<Item> registerFoodWithMultipleEffects(String name, int hunger, float saturation) {
+        return ITEMS.register(name, () -> new PMFFoodItem(new Item.Properties()
+                .food(new FoodProperties.Builder()
+                        .nutrition(hunger)
+                        .saturationMod(saturation)
+                        .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0), 1.0f)  // 흡수 1 120초 = 2400틱
+                        .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 2400, 0), 1.0f)  // 수중 호흡 120초 = 2400틱
+                        .build())));
+    }
+
 
     //빨리 먹는 음식
     protected static RegistryObject<Item> registerFastFood(String name, int hunger, float saturation) {

@@ -15,7 +15,7 @@ public class PMFItem extends Item {
     }
 
     // 아이템 등록 용
-    protected static RegistryObject<Item> registerItem(String name) {
+    public static RegistryObject<Item> registerItem(String name) {
         return ITEMS.register(name, () -> new PMFItem(new Item.Properties()));
     }
 

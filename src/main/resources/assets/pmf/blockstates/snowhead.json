@@ -1,9 +1,0 @@
-﻿{
-  "variants": {
-    "bites=0": { "model": "pmf:block/snowhead1" },
-    "bites=1": { "model": "pmf:block/snowhead2" },
-    "bites=2": { "model": "pmf:block/snowhead3" },
-    "bites=3": { "model": "pmf:block/snowhead4" },
-    "bites=4": { "model": "pmf:block/snowhead5" }
-  }
-}
