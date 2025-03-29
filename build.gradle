@@ -70,14 +70,6 @@ minecraft {
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
-        client {
-            // 기존 설정에 추가
-            jvmArgs = ['-Xmx4G', '-Xms2G']
-            // 필요시 Mixin 디버그 옵션 비활성화
-            property 'mixin.debug', 'false'
-            property 'mixin.checks', 'false'
-            property 'mixin.hotSwap', 'false'
-        }
 
         // applies to all the run configs below
         configureEach {
@@ -106,6 +98,10 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+
+            property 'mixin.debug', 'false'
+            property 'mixin.checks', 'false'
+            property 'mixin.hotSwap', 'false'
         }
 
         server {

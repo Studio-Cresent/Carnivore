@@ -1,13 +1,13 @@
-package org.domi.init;
+package org.domi.init.items;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.domi.Pmf;
+import org.domi.PMF;
 
 public class PMFItem extends Item {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Pmf.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PMF.MODID);
 
     // 생성자
     public PMFItem(Properties properties) {

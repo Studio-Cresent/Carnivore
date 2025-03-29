@@ -9,19 +9,19 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import org.domi.init.PMFItem;
-import org.domi.init.PMFItemList;
+import org.domi.init.items.PMFItem;
+import org.domi.init.itemlists.PMFItemList;
 
 
 public class PMFCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB , Pmf.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB , PMF.MODID);
 
 
     public static final RegistryObject<CreativeModeTab> PMF_Tab = CREATIVE_TABS.register("pmf_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(PMFItemList.MUSHROOM_BURGER.get()))
-                    .title(Component.translatable("itemGroup." + Pmf.MODID + ".pmf_tab"))
+                    .title(Component.translatable("itemGroup." + PMF.MODID + ".pmf_tab"))
                     .build()
     );
 

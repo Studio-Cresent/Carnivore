@@ -1,0 +1,51 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"texture_size": [64, 64],
+	"textures": {
+		"1": "pmf:block/snowhead3",
+		"particle": "pmf:block/snowhead1"
+	},
+	"elements": [
+		{
+			"name": "spoon",
+			"from": [8, 1, 9],
+			"to": [10, 9, 11],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [9, 6, 8]},
+			"faces": {
+				"north": {"uv": [0, 6, 0.5, 8], "texture": "#1"},
+				"east": {"uv": [0.5, 6, 1, 8], "texture": "#1"},
+				"south": {"uv": [1, 6, 1.5, 8], "texture": "#1"},
+				"west": {"uv": [1.5, 6, 2, 8], "texture": "#1"},
+				"up": {"uv": [2.5, 7, 2, 6.5], "texture": "#1"},
+				"down": {"uv": [3, 6.5, 2.5, 7], "texture": "#1"}
+			}
+		},
+		{
+			"name": "stuffing",
+			"from": [4, 1, 4],
+			"to": [12, 4, 12],
+			"faces": {
+				"north": {"uv": [3, 1.25, 5, 2], "texture": "#1"},
+				"east": {"uv": [3, 3.25, 5, 4], "texture": "#1"},
+				"south": {"uv": [3, 5.25, 5, 6], "texture": "#1"},
+				"west": {"uv": [5, 1.25, 7, 2], "texture": "#1"},
+				"up": {"uv": [7, 4, 5, 2], "texture": "#1"},
+				"down": {"uv": [7, 4, 5, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "pumpkin",
+			"from": [2, 0, 2],
+			"to": [14, 1, 14],
+			"faces": {
+				"north": {"uv": [2, 6, 5, 6.25], "texture": "#1"},
+				"east": {"uv": [5, 6, 8, 6.25], "texture": "#1"},
+				"south": {"uv": [2, 6.25, 5, 6.5], "texture": "#1"},
+				"west": {"uv": [5, 6.25, 8, 6.5], "texture": "#1"},
+				"up": {"uv": [3, 3, 0, 0], "texture": "#1"},
+				"down": {"uv": [3, 3, 0, 6], "texture": "#1"}
+			}
+		}
+	]
+}
