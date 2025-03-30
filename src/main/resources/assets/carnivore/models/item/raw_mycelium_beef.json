@@ -1,6 +1,6 @@
-﻿{
+{
   "parent": "item/generated",
     "textures": {
-        "layer0": "carnivore:item/pumpkin_soup"
+        "layer0": "carnivore:item/raw_mycelium_beef"
     }
 }

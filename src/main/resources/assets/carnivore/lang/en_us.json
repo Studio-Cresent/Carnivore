@@ -1,0 +1,13 @@
+﻿{
+  "itemGroup.carnivore.carnivore_tab": "Carnivore",
+  "item.carnivore.raw_mycelium_beef": "Raw Mycelium Beef",
+  "item.carnivore.mycelium_steak": "Mycelium Steak",
+  "item.carnivore.raw_sniffer_meat": "Raw Sniffer Meat",
+  "item.carnivore.cooked_sniffer_meat": "Cooked Sniffer Meat",
+  "item.carnivore.tadpole": "Tadpole",
+  "item.carnivore.squid_tentacle": "Squid Tentacle",
+  "item.carnivore.glow_squid_tentacle": "Glow Squid Tentacle",
+  "item.carnivore.golden_squid_tentacle": "Golden Squid Tentacle",
+  "item.carnivore.cooked_rabbit_foot": "Cooked Rabbit Foot",
+  "carnivore:carnivore_icon_item": "Easter Egg!!!"
+}

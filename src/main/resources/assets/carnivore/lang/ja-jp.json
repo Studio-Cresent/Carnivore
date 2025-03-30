@@ -1,0 +1,13 @@
+{
+  "itemGroup.carnivore.carnivore_tab": "Carnivore",
+  "item.carnivore.raw_mycelium_beef": "生きのこ牛肉",
+  "item.carnivore.mycelium_steak": "きのこステーキ",
+  "item.carnivore.raw_sniffer_meat": "生スニッファー肉",
+  "item.carnivore.cooked_sniffer_meat": "焼きスニッファー肉",
+  "item.carnivore.tadpole": "おたまじゃくし",
+  "item.carnivore.squid_tentacle": "イカの足",
+  "item.carnivore.glow_squid_tentacle": "光るイカの足",
+  "item.carnivore.golden_squid_tentacle": "金色イカの足",
+  "item.carnivore.cooked_rabbit_foot": "焼きウサギの足",
+  "carnivore:carnivore_icon_item": "開発者にいいjpopをおすすめしてください"
+}

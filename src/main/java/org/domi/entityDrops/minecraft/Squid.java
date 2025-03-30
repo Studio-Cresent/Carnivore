@@ -8,6 +8,6 @@ import org.domi.init.itemlists.PMFItemList;
 public class Squid {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
-        EntityDropUtil.entityDrop(event, "minecraft:squid", PMFItemList.SQUID_TENTACLE, 1, 3);
+        EntityDropUtil.entityDrop(event, "minecraft:squid", PMFItemList.SQUID_TENTACLE, 1, 2);
     }
 }

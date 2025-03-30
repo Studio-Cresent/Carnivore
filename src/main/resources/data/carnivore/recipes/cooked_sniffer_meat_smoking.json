@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "carnivore:raw_sniffer_meat"
+    },
+    "result": "carnivore:cooked_sniffer_meat",
+    "experience": 0.35,
+    "cookingtime": 100
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "pmf:raw_sniffer_meat"
-  },
-  "result": "pmf:cooked_sniffer_meat",
-  "experience": 0.35,
-  "cookingtime": 200
-}

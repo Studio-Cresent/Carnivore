@@ -8,7 +8,7 @@ import org.domi.init.itemlists.PMFItemList;
 public class Mycelium {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
-        EntityDropUtil.entityDrop(event, "minecraft:mooshroom", PMFItemList.RAW_MYCELIUM_BEEF, 1, 3);
+        EntityDropUtil.entityDrop(event, "minecraft:mooshroom", PMFItemList.RAW_MYCELIUM_BEEF, 1, 2);
         if (event.getEntity().getType().getDescriptionId().equals("entity.minecraft.mooshroom")) {
             // 드롭 목록에서 일반 소고기 제거
             event.getDrops().removeIf(entityItem ->

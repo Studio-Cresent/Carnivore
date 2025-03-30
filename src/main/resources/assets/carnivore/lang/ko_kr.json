@@ -1,0 +1,13 @@
+﻿{
+  "itemGroup.carnivore.carnivore_tab": "Carnivore",
+  "item.carnivore.raw_mycelium_beef": "익히지 않은 균사 소고기",
+  "item.carnivore.mycelium_steak": "균사 스테이크",
+  "item.carnivore.raw_sniffer_meat": "익히지 않은 스니퍼 고기",
+  "item.carnivore.cooked_sniffer_meat": "익힌 스니퍼 고기",
+  "item.carnivore.tadpole": "올챙이",
+  "item.carnivore.squid_tentacle": "오징어 촉수",
+  "item.carnivore.glow_squid_tentacle": "발광 오징어 촉수",
+  "item.carnivore.golden_squid_tentacle": "황금 오징어 촉수",
+  "item.carnivore.cooked_rabbit_foot": "익힌 토끼 발",
+  "carnivore:carnivore_icon_item": "이야 이걸 찾네요 ㅋㅋㅋ"
+}

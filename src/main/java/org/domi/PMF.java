@@ -13,7 +13,7 @@ import org.domi.init.itemlists.PMFItemList;
 
 @Mod(PMF.MODID)
 public class PMF {
-    public static final String MODID = "pmf";
+    public static final String MODID = "carnivore";
 
     public static final Logger LOGGER = LogManager.getLogger();
 

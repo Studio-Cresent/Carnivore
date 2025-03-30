@@ -1,0 +1,13 @@
+{
+  "itemGroup.carnivore.carnivore_tab" : "Carnivore",
+  "item.carnivore.raw_mycelium_beef": "Thịt bò nấm tươi",
+  "item.carnivore.mycelium_steak": "Bít tết nấm",
+  "item.carnivore.raw_sniffer_meat": "Thịt Sniffer sống",
+  "item.carnivore.cooked_sniffer_meat": "Thịt Sniffer nướng",
+  "item.carnivore.tadpole": "Nòng nọc",
+  "item.carnivore.squid_tentacle": "Xúc tu mực",
+  "item.carnivore.glow_squid_tentacle": "Xúc tu mực phát sáng",
+  "item.carnivore.golden_squid_tentacle": "Xúc tu mực vàng",
+  "item.carnivore.cooked_rabbit_foot": "Chân thỏ nướng",
+  "carnivore:carnivore_icon_item" : "Phở Việt Nam ngon quá!"
+}

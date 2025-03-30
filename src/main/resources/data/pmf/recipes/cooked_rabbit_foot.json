@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:rabbit_foot"
-  },
-  "result": "pmf:cooked_rabbit_foot",
-  "experience": 0.35,
-  "cookingtime": 200
-}

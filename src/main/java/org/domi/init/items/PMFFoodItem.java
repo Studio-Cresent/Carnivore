@@ -59,5 +59,4 @@ public class PMFFoodItem extends PMFItem {
                         .fast()  // 빨리 먹을 수 있음
                         .build())));
     }
-
 }

@@ -7,6 +7,6 @@ import org.domi.init.itemlists.PMFItemList;
 public class Tadpole {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
-        EntityDropUtil.entityDrop(event, "minecraft:tadpole", PMFItemList.TADPOLE, 1, 3);
+        EntityDropUtil.entityDrop(event, "minecraft:tadpole", PMFItemList.TADPOLE, 1, 0);
     }
 }

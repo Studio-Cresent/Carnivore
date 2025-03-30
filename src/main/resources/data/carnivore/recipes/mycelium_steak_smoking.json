@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "carnivore:raw_mycelium_beef"
+    },
+    "result": "carnivore:mycelium_steak",
+    "experience": 0.35,
+    "cookingtime": 100
+}

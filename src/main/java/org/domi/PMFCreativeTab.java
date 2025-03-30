@@ -19,10 +19,10 @@ public class PMFCreativeTab {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB , PMF.MODID);
 
 
-    public static final RegistryObject<CreativeModeTab> PMF_Tab = CREATIVE_TABS.register("pmf_tab",
+    public static final RegistryObject<CreativeModeTab> PMF_Tab = CREATIVE_TABS.register("carnivore_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(TAB_ICON_ITEM.get()))
-                    .title(Component.translatable("itemGroup." + PMF.MODID + ".pmf_tab"))
+                    .title(Component.translatable("itemGroup." + PMF.MODID + ".carnivore_tab"))
                     .build()
     );
 

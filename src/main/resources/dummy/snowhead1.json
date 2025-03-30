@@ -3,8 +3,8 @@
 	"parent": "block/block",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "pmf:block/snowhead1",
-		"particle": "pmf:block/snowhead1"
+		"0": "carnivore:block/snowhead1",
+		"particle": "carnivore:block/snowhead1"
 	},
 	"elements": [
 		{
