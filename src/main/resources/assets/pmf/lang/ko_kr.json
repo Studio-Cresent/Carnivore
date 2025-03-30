@@ -1,14 +1,13 @@
 ﻿{
-  "item.pmf.mushroom_burger": "버섯 버거",
-  "itemGroup.pmf.pmf_tab": "PMF",
-  "item.pmf.pumpkin_soup": "호박 수프",
-  "item.pmf.raw_mycelium_beef": "안 익은 버섯 스테이크",
-  "item.pmf.mycelium_steak": "구운 버섯 스테이크",
-  "item.pmf.raw_sniffer_meat": "안 익은 스니퍼 고기",
-  "item.pmf.cooked_sniffer_meat": "익은 스니퍼 고기",
+  "itemGroup.pmf.pmf_tab": "Carnivore",
+  "item.pmf.raw_mycelium_beef": "익히지 않은 균사 소고기",
+  "item.pmf.mycelium_steak": "균사 스테이크",
+  "item.pmf.raw_sniffer_meat": "익히지 않은 스니퍼 고기",
+  "item.pmf.cooked_sniffer_meat": "익힌 스니퍼 고기",
   "item.pmf.tadpole": "올챙이",
-  "item.pmf.squid_tentacle": "오징어 다리",
-  "item.pmf.glow_squid_tentacle": "발광 오징어 다리",
-  "item.pmf.golden_squid_tentacle": "금 오징어 다리",
-  "item.pmf.cooked_rabbit_foot": "익은 토끼 발"
+  "item.pmf.squid_tentacle": "오징어 촉수",
+  "item.pmf.glow_squid_tentacle": "발광 오징어 촉수",
+  "item.pmf.golden_squid_tentacle": "황금 오징어 촉수",
+  "item.pmf.cooked_rabbit_foot": "익힌 토끼 발",
+  "pmf:tab_icon_item": "이야 이걸 찾네요 ㅋㅋㅋ"
 }

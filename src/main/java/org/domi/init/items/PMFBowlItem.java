@@ -11,8 +11,8 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 
-public class BowlItem extends PMFFoodItem {
-    public BowlItem(Item.Properties properties) {
+public class PMFBowlItem extends PMFFoodItem {
+    public PMFBowlItem(Item.Properties properties) {
         super(properties);
     }
 
@@ -22,7 +22,7 @@ public class BowlItem extends PMFFoodItem {
 
     // 또는 별도로 등록 메서드 구현 시
     public static RegistryObject<Item> registerBowlItem(String name, int hunger, float saturation) {
-        return ITEMS.register(name, () -> new BowlItem(
+        return ITEMS.register(name, () -> new PMFBowlItem(
                 new Item.Properties()
                         .food(new FoodProperties.Builder()
                                 .nutrition(hunger)

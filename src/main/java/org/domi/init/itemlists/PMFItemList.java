@@ -2,20 +2,11 @@ package org.domi.init.itemlists;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
-import org.domi.init.ConsumableBlock;
 import org.domi.init.block.PMFBlock;
-import org.domi.init.block.PMFBlockItem;
-import org.domi.init.items.BowlItem;
 import org.domi.init.items.PMFFoodItem;
-import org.domi.init.items.PMFItem;
 
 import static org.domi.init.items.PMFItem.ITEMS;
 
@@ -42,7 +33,7 @@ public class PMFItemList {
 
 
 //    //bowl
-//    public static final RegistryObject<Item> PUMPKIN_SOUP = BowlItem.registerBowlItem("pumpkin_soup", 10 , 0.6f);
+//    public static final RegistryObject<Item> PUMPKIN_SOUP = PMFBowlItem.registerBowlItem("pumpkin_soup", 10 , 0.6f);
 
     //block
 //    public static final RegistryObject<Block> SNOWHEAD = ConsumableBlock.registerConsumableBlock(

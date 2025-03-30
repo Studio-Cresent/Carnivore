@@ -1,7 +1,5 @@
 ﻿{
-  "item.pmf.mushroom_burger": "Mushroom Burger",
-  "itemGroup.pmf.pmf_tab": "PMF",
-  "item.pmf.pumpkin_soup": "Pumpkin Soup",
+  "itemGroup.pmf.pmf_tab": "Carnivore",
   "item.pmf.raw_mycelium_beef": "Raw Mycelium Beef",
   "item.pmf.mycelium_steak": "Mycelium Steak",
   "item.pmf.raw_sniffer_meat": "Raw Sniffer Meat",
@@ -10,5 +8,6 @@
   "item.pmf.squid_tentacle": "Squid Tentacle",
   "item.pmf.glow_squid_tentacle": "Glow Squid Tentacle",
   "item.pmf.golden_squid_tentacle": "Golden Squid Tentacle",
-  "item.pmf.cooked_rabbit_foot": "Cooked Rabbit Foot"
+  "item.pmf.cooked_rabbit_foot": "Cooked Rabbit Foot",
+  "pmf:tab_icon_item": "Easter Egg!!!"
 }

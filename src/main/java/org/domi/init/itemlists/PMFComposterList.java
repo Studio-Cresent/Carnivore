@@ -1,8 +1,6 @@
 package org.domi.init.itemlists;
 
-import net.minecraft.world.level.block.ComposterBlock;
-
-public class ComposterList {
+public class PMFComposterList {
     public static void register(){
 //        ComposterBlock.COMPOSTABLES.put(PMFItemList.GOLDEN_SQUID_TENTACLE.get(), 0.85f);
 //        ComposterBlock.COMPOSTABLES.put(PMFItemList.SQUID_TENTACLE.get(), 0.85f);
