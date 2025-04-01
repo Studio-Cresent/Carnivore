@@ -1,7 +1,6 @@
-// cooked_squid_tentacle.json
 {
   "parent": "item/generated",
-  "textures": {
-    "layer0": "carnivore:item/cooked_squid_tentacle"
-  }
+    "textures": {
+      "layer0": "carnivore:item/cooked_squid_tentacle"
+    }
 }

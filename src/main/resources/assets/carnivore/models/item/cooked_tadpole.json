@@ -1,7 +1,6 @@
-// cooked_tadpole.json
 {
   "parent": "item/generated",
-  "textures": {
-    "layer0": "carnivore:item/cooked_tadpole"
-  }
+    "textures": {
+      "layer0": "carnivore:item/cooked_tadpole"
+    }
 }
