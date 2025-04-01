@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+    "ingredient": {
+      "item": "carnivore:raw_turtle"
+    },
+    "result": "carnivore:cooked_turtle",
+    "experience": 0.35,
+    "cookingtime": 100
+}

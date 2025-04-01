@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+    "ingredient": {
+      "item": "carnivore:raw_bird"
+    },
+    "result": "carnivore:cooked_bird",
+    "experience": 0.35,
+    "cookingtime": 100
+}

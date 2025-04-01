@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "carnivore:tadpole"
+    },
+    "result": "carnivore:cooked_tadpole",
+    "experience": 0.35,
+    "cookingtime": 200
+}

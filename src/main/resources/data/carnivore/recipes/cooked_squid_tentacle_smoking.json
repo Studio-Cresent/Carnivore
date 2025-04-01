@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+    "ingredient": {
+      "item": "carnivore:squid_tentacle"
+    },
+    "result": "carnivore:cooked_squid_tentacle",
+    "experience": 0.35,
+    "cookingtime": 100
+}
