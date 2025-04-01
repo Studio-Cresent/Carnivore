@@ -18,7 +18,7 @@ public class PMFItemList {
     public static final RegistryObject<Item> COOKED_SNIFFER_MEAT = PMFFoodItem.registerFood("cooked_sniffer_meat", 10, 15.0f);
     public static final RegistryObject<Item> COOKED_SQUID_TENTACLE = PMFFoodItem.registerFood("cooked_squid_tentacle", 4, 5.1f);
     public static final RegistryObject<Item> COOKED_TADPOLE = PMFFoodItem.registerFood("cooked_tadpole", 4, 1.4f);
-    public static final RegistryObject<Item> COOKED_TURTLE = PMFFoodItem.registerFood("cooked_turtle_campfire.json", 7, 7.5f);
+    public static final RegistryObject<Item> COOKED_TURTLE = PMFFoodItem.registerFood("cooked_turtle", 7, 7.5f);
     public static final RegistryObject<Item> MYCELIUM_STEAK = PMFFoodItem.registerFood("mycelium_steak", 8, 12.8f);
     public static final RegistryObject<Item> RAW_SNIFFER_MEAT = PMFFoodItem.registerFood("raw_sniffer_meat", 5, 2.0f);
     public static final RegistryObject<Item> RAW_TURTLE = PMFFoodItem.registerFood("raw_turtle", 3, 1.8f);
