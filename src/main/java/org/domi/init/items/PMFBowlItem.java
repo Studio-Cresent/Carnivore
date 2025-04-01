@@ -20,7 +20,6 @@ public class PMFBowlItem extends PMFFoodItem {
         return PMFFoodItem.registerFood(name, hunger, saturation);
     }
 
-    // 또는 별도로 등록 메서드 구현 시
     public static RegistryObject<Item> registerBowlItem(String name, int hunger, float saturation) {
         return ITEMS.register(name, () -> new PMFBowlItem(
                 new Item.Properties()

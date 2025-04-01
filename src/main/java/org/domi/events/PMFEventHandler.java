@@ -9,7 +9,6 @@ public class PMFEventHandler {
     }
 
     public static void registerForgeEvents() {
-        // AlexTiger 이벤트 리스너 등록
 //        MinecraftForge.EVENT_BUS.register(new AlexTiger());
         MinecraftForge.EVENT_BUS.register(new Sniffer());
         MinecraftForge.EVENT_BUS.register(new GlowSquid());

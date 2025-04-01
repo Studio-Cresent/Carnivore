@@ -39,14 +39,18 @@ public class PMFFoodItem extends PMFItem {
     /**
      * 여러 효과가 걸리는 음식
      */
-    public static RegistryObject<Item> registerFoodWithMultipleEffects(String name, int hunger, float saturation) {
+    public static RegistryObject<Item> registerFoodWithMultipleEffects(String name, int hunger, float saturation,
+                                                                       MobEffectInstance... effects) {
+        FoodProperties.Builder foodBuilder = new FoodProperties.Builder()
+                .nutrition(hunger)
+                .saturationMod(saturation);
+
+        for (MobEffectInstance effect : effects) {
+            foodBuilder.effect(effect, 1.0f);
+        }
+
         return ITEMS.register(name, () -> new PMFFoodItem(new Item.Properties()
-                .food(new FoodProperties.Builder()
-                        .nutrition(hunger)
-                        .saturationMod(saturation)
-                        .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0), 1.0f)  // 흡수 1 120초 = 2400틱
-                        .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 2400, 0), 1.0f)  // 수중 호흡 120초 = 2400틱
-                        .build())));
+                .food(foodBuilder.build())));
     }
 
 
@@ -56,7 +60,7 @@ public class PMFFoodItem extends PMFItem {
                 .food(new FoodProperties.Builder()
                         .nutrition(hunger)
                         .saturationMod(saturation)
-                        .fast()  // 빨리 먹을 수 있음
+                        .fast()  // 그 뭐시기 캘프? 처럼 빨리 먹기
                         .build())));
     }
 }
