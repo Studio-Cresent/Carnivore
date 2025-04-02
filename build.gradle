@@ -309,6 +309,7 @@ task commitAndPushVersionChanges {
         def allowedPaths = [
                 '.github/workflows',
                 '.idea',
+                'gradle.properties',
                 'gradle/wrapper',
                 'src/main',
                 'Jenkinsfile',

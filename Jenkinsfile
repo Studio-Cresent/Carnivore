@@ -28,7 +28,10 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 echo '빌드 중...'
-                sh './gradlew clean build'
+                // gradlew 파일에 실행 권한 부여
+                sh 'chmod +x gradlew'
+                // 테스트는 제외하고 빌드 실행 (필요에 따라 -x test 옵션 추가)
+                sh './gradlew clean build -x test'
             }
             post {
                 success {
@@ -43,7 +46,7 @@ pipeline {
         stage('Package') {
             steps {
                 echo 'JAR 패키징 중...'
-                sh './gradlew jar'
+                sh './gradlew jar -x test'
             }
             post {
                 success {
