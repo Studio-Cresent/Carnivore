@@ -360,17 +360,10 @@ task commitAndPushVersionChanges {
     }
 }
 
-def skipVersionCommit = project.hasProperty('skipVersionCommit') ? project.getProperty('skipVersionCommit').toBoolean() : false
-
-
-if (!skipVersionCommit) {
-    build.dependsOn(incrementPatchVersion)
-    incrementPatchVersion.finalizedBy(commitAndPushVersionChanges)
-} else {
-    println "skipVersionCommit 프로퍼티가 설정됨: 자동 버전 증가 및 커밋/푸시 건너뛰기"
+if (!System.getenv('JENKINS_URL')) {
+    build.dependsOn incrementPatchVersion
+    incrementPatchVersion.finalizedBy commitAndPushVersionChanges
 }
-
-
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
