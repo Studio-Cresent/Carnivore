@@ -28,7 +28,6 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 echo '빌드 중...'
-                sh 'chmod +x gradlew'
                 sh './gradlew clean build'
             }
             post {
@@ -37,22 +36,6 @@ pipeline {
                 }
                 failure {
                     echo '빌드 실패'
-                }
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo '테스트 중...'
-                sh './gradlew test --rerun-tasks' // 테스트 실행 강제
-            }
-            post {
-                success {
-                    echo '테스트 성공'
-                    junit 'build/test-results/test/*.xml' // 경로 확인 후 수정
-                }
-                failure {
-                    echo '테스트 실패'
                 }
             }
         }
@@ -75,10 +58,6 @@ pipeline {
     }
 
     post {
-        always {
-            echo '작업 공간 정리 중...'
-            cleanWs()
-        }
         success {
             echo '파이프라인이 성공적으로 완료되었습니다!'
         }

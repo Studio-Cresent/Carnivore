@@ -306,17 +306,31 @@ task commitAndPushVersionChanges {
             standardOutput = statusOutput
         }
 
+        def allowedPaths = [
+                '.github/workflows',
+                '.idea',
+                'gradle/wrapper',
+                'src/main',
+                'Jenkinsfile',
+                'build.gradle',
+                'gradle.properties',
+                'gradlew',
+                'gradlew.bat',
+                'settings.gradle'
+        ]
+
         def changedFiles = statusOutput.toString().readLines()
                 .collect { line -> line.substring(3) } // git status 출력에서 파일 이름만 추출
                 .findAll { fileName ->
-                    // 버전 정보를 포함하는 파일만 필터링 (필요한 파일을 추가하세요)
-                    fileName == 'gradle.properties' ||
-                            fileName.endsWith('build.gradle') ||
-                            fileName.endsWith('mods.toml')
+                    // 지정된 파일/디렉토리에 속하는 변경사항만 포함
+                    allowedPaths.any { path ->
+                        fileName == path || // 파일 그 자체인 경우
+                                fileName.startsWith(path + '/') // 지정된 디렉토리 내부의 파일인 경우
+                    }
                 }
 
         if (changedFiles.isEmpty()) {
-            println "버전 관련 변경된 파일이 없습니다."
+            println "커밋할 변경된 파일이 없습니다."
             return
         }
 
@@ -345,6 +359,7 @@ task commitAndPushVersionChanges {
         println "버전 ${version}에 대한 변경 사항이 커밋 및 푸시되었습니다."
     }
 }
+
 
 
 build.dependsOn(incrementPatchVersion)
