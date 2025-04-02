@@ -291,8 +291,64 @@ task incrementPatchVersion {
     }
 }
 
+task commitAndPushVersionChanges {
+    doLast {
+        // 현재 버전 가져오기
+        Properties props = new Properties()
+        File propsFile = file('gradle.properties')
+        props.load(propsFile.newDataInputStream())
+        String version = props.getProperty('mod_version')
+
+        // Git 상태 확인 (변경된 파일 목록 가져오기)
+        def statusOutput = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'status', '--porcelain'
+            standardOutput = statusOutput
+        }
+
+        def changedFiles = statusOutput.toString().readLines()
+                .collect { line -> line.substring(3) } // git status 출력에서 파일 이름만 추출
+                .findAll { fileName ->
+                    // 버전 정보를 포함하는 파일만 필터링 (필요한 파일을 추가하세요)
+                    fileName == 'gradle.properties' ||
+                            fileName.endsWith('build.gradle') ||
+                            fileName.endsWith('mods.toml')
+                }
+
+        if (changedFiles.isEmpty()) {
+            println "버전 관련 변경된 파일이 없습니다."
+            return
+        }
+
+        println "커밋할 변경 파일: ${changedFiles.join(', ')}"
+
+        // 변경된 파일 스테이징
+        changedFiles.each { fileName ->
+            exec {
+                commandLine 'git', 'add', fileName
+                ignoreExitValue true
+            }
+        }
+
+        // 커밋
+        exec {
+            commandLine 'git', 'commit', '-m', "버전 업데이트: ${version}"
+            ignoreExitValue true
+        }
+
+        // 푸시
+        exec {
+            commandLine 'git', 'push'
+            ignoreExitValue true
+        }
+
+        println "버전 ${version}에 대한 변경 사항이 커밋 및 푸시되었습니다."
+    }
+}
+
 
 build.dependsOn(incrementPatchVersion)
+build.finalizedBy(commitAndPushVersionChanges)
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
