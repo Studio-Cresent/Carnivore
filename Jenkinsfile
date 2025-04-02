@@ -1,14 +1,14 @@
 pipeline {
     agent any
-    
+
     tools {
         jdk 'jdk17'
     }
-    
+
     triggers {
         githubPush()
     }
-    
+
     stages {
         stage('Git Clone') {
             steps {
@@ -24,10 +24,11 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Gradle Build') {
             steps {
                 echo '빌드 중...'
+                sh 'chmod +x gradlew'
                 sh './gradlew clean build'
             }
             post {
