@@ -31,7 +31,7 @@ pipeline {
                 // gradlew 파일에 실행 권한 부여
                 sh 'chmod +x gradlew'
                 // 테스트는 제외하고 빌드 실행 (필요에 따라 -x test 옵션 추가)
-                sh './gradlew clean build -x test'
+                sh './gradlew clean build -x test -x incrementPatchVersion'
             }
             post {
                 success {
@@ -61,6 +61,16 @@ pipeline {
     }
 
     post {
+        always {
+            discordSend(
+                description: "**빌드 #${env.BUILD_NUMBER}**: ${currentBuild.currentResult}",
+                link: env.BUILD_URL,
+                result: currentBuild.currentResult,
+                title: "${env.JOB_NAME}",
+                webhookURL: "여기에_Discord_웹훅_URL_입력",
+                footer: "빌드 시간: ${currentBuild.durationString}"
+            )
+        }
         success {
             echo '파이프라인이 성공적으로 완료되었습니다!'
         }
