@@ -67,7 +67,7 @@ pipeline {
                 link: env.BUILD_URL,
                 result: currentBuild.currentResult,
                 title: "${env.JOB_NAME}",
-                webhookURL: "여기에_Discord_웹훅_URL_입력",
+                webhookURL: "https://discord.com/api/webhooks/1357005699179221153/oS2K013AJNGM2lkZ4JI0Vqi-8g9Y-4kItCO2eGgFpiQOIgO3DPthPwtAk-oPna9cXkIq",
                 footer: "빌드 시간: ${currentBuild.durationString}"
             )
         }
