@@ -362,9 +362,10 @@ task commitAndPushVersionChanges {
 
 def skipVersionCommit = project.hasProperty('skipVersionCommit') ? project.getProperty('skipVersionCommit').toBoolean() : false
 
+
 if (!skipVersionCommit) {
     build.dependsOn(incrementPatchVersion)
-    build.finalizedBy(commitAndPushVersionChanges)
+    incrementPatchVersion.finalizedBy(commitAndPushVersionChanges)
 } else {
     println "skipVersionCommit 프로퍼티가 설정됨: 자동 버전 증가 및 커밋/푸시 건너뛰기"
 }
