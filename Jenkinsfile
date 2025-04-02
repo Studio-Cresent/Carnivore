@@ -6,7 +6,7 @@ pipeline {
     }
     
     triggers {
-        githubPush() // GitHub webhook에 의해 트리거됨
+        githubPush()
     }
     
     stages {
