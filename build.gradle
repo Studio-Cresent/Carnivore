@@ -360,10 +360,10 @@ task commitAndPushVersionChanges {
     }
 }
 
-
-
-build.dependsOn(incrementPatchVersion)
-build.finalizedBy(commitAndPushVersionChanges)
+if (!System.getenv('JENKINS_URL')) {
+    build.dependsOn(incrementPatchVersion)
+    build.finalizedBy(commitAndPushVersionChanges)
+}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
