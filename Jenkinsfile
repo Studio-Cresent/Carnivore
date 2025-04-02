@@ -44,12 +44,12 @@ pipeline {
         stage('Test') {
             steps {
                 echo '테스트 중...'
-                sh './gradlew test'
+                sh './gradlew test --rerun-tasks' // 테스트 실행 강제
             }
             post {
                 success {
                     echo '테스트 성공'
-                    junit '**/build/test-results/test/*.xml'
+                    junit 'build/test-results/test/*.xml' // 경로 확인 후 수정
                 }
                 failure {
                     echo '테스트 실패'

@@ -210,6 +210,90 @@ tasks.named('jar', Jar).configure {
     finalizedBy 'reobfJar'
 }
 
+task incrementMajorVersion {
+    doLast {
+        // 현재 properties 파일 읽기
+        Properties props = new Properties()
+        File propsFile = file('gradle.properties')
+        props.load(propsFile.newDataInputStream())
+
+        // 현재 버전 분리하기
+        String version = props.getProperty('mod_version')
+        String[] versionParts = version.split('\\.')
+        int major = Integer.parseInt(versionParts[0])
+
+        // 메인 버전 증가, 나머지는 0으로 리셋
+        major++
+
+        // 새로운 버전 문자열 생성
+        String newVersion = "${major}.0.0"
+
+        // properties 파일 업데이트
+        props.setProperty('mod_version', newVersion)
+        props.store(propsFile.newWriter(), null)
+
+        println "메인 버전이 증가되었습니다: ${newVersion}"
+    }
+}
+
+task incrementMinorVersion {
+    doLast {
+        // 현재 properties 파일 읽기
+        Properties props = new Properties()
+        File propsFile = file('gradle.properties')
+        props.load(propsFile.newDataInputStream())
+
+        // 현재 버전 분리하기
+        String version = props.getProperty('mod_version')
+        String[] versionParts = version.split('\\.')
+        int major = Integer.parseInt(versionParts[0])
+        int minor = Integer.parseInt(versionParts[1])
+
+        // 마이너 버전 증가, 패치는 0으로 리셋
+        minor++
+
+        // 새로운 버전 문자열 생성
+        String newVersion = "${major}.${minor}.0"
+
+        // properties 파일 업데이트
+        props.setProperty('mod_version', newVersion)
+        props.store(propsFile.newWriter(), null)
+
+        println "마이너 버전이 증가되었습니다: ${newVersion}"
+    }
+}
+
+task incrementPatchVersion {
+    doLast {
+        // 현재 properties 파일 읽기
+        Properties props = new Properties()
+        File propsFile = file('gradle.properties')
+        props.load(propsFile.newDataInputStream())
+
+        // 현재 버전 분리하기
+        String version = props.getProperty('mod_version')
+        String[] versionParts = version.split('\\.')
+        int major = Integer.parseInt(versionParts[0])
+        int minor = Integer.parseInt(versionParts[1])
+        int patch = Integer.parseInt(versionParts[2])
+
+        // 패치 버전만 증가
+        patch++
+
+        // 새로운 버전 문자열 생성
+        String newVersion = "${major}.${minor}.${patch}"
+
+        // properties 파일 업데이트
+        props.setProperty('mod_version', newVersion)
+        props.store(propsFile.newWriter(), null)
+
+        println "패치 버전이 증가되었습니다: ${newVersion}"
+    }
+}
+
+
+build.dependsOn(incrementPatchVersion)
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
