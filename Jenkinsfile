@@ -28,7 +28,7 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 echo '빌드 중...'
-                bat 'gradlew.bat clean build'
+                sh './gradlew clean build'
             }
             post {
                 success {
@@ -39,11 +39,11 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Test') {
             steps {
                 echo '테스트 중...'
-                bat 'gradlew.bat test'
+                sh './gradlew test'
             }
             post {
                 success {
@@ -55,11 +55,11 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Package') {
             steps {
                 echo 'JAR 패키징 중...'
-                bat 'gradlew.bat jar'
+                sh './gradlew jar'
             }
             post {
                 success {
@@ -72,7 +72,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             echo '작업 공간 정리 중...'
