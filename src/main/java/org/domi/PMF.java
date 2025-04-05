@@ -36,9 +36,11 @@ public class PMF {
 
     private void gatherData(GatherDataEvent event) {
         var generator = event.getGenerator();
-        var existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeServer(), new PMFRecipeList(generator));
+        if (event.includeServer()) {
+            generator.addProvider(true, new PMFRecipeList(generator));
+        }
+
     }
 
 

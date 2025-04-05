@@ -74,7 +74,31 @@ public class PMFCookingRecipeBuilder {
      * @param smokingTime  훈연기 요리 시간
      * @param blastingTime 용광로 요리 시간
      */
-    public static void createAllCookingRecipes(Consumer<FinishedRecipe> consumer, ItemLike ingredient, ItemLike result, float experience, int smeltingTime, int campfireTime, int smokingTime, int blastingTime) {/* implementation omitted for shortness */}
+    /**
+     * 모든 유형의 요리 레시피(화로, 모닥불, 훈연기, 용광로)를 한번에 생성합니다.
+     *
+     * @param consumer     레시피 소비자
+     * @param ingredient   요리할 재료
+     * @param result       결과 아이템
+     * @param experience   경험치
+     * @param smeltingTime 화로 요리 시간
+     * @param campfireTime 모닥불 요리 시간
+     * @param smokingTime  훈연기 요리 시간
+     * @param blastingTime 용광로 요리 시간
+     */
+    public static void createAllCookingRecipes(Consumer<FinishedRecipe> consumer, ItemLike ingredient, ItemLike result, float experience, int smeltingTime, int campfireTime, int smokingTime, int blastingTime) {
+        // 화로 레시피 생성
+        createSmeltingRecipe(consumer, ingredient, result, experience, smeltingTime);
+
+        // 모닥불 레시피 생성
+        createCampfireRecipe(consumer, ingredient, result, experience, campfireTime);
+
+        // 훈연기 레시피 생성
+        createSmokingRecipe(consumer, ingredient, result, experience, smokingTime);
+
+        // 용광로 레시피 생성
+        createBlastingRecipe(consumer, ingredient, result, experience, blastingTime);
+    }
 
     /**
      * 기본 시간 값을 사용하여 모든 유형의 요리 레시피를 생성합니다.
