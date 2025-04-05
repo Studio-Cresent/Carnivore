@@ -25,7 +25,6 @@ public class PMF {
         setup(modEventBus);
     }
 
-
     private void setup(IEventBus eventBus){
         PMFItemList.register(eventBus);
         PMFCreativeTab.initialize(eventBus);
