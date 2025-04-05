@@ -23,7 +23,6 @@ public class PMFFoodItem extends PMFItem {
                         .build())));
     }
 
-
     /**
      * 먹으면 효과 걸리는 음식
      */

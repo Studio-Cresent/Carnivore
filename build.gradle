@@ -361,9 +361,14 @@ task commitAndPushVersionChanges {
 }
 
 if (!System.getenv('JENKINS_URL')) {
-    build.dependsOn incrementPatchVersion
-    incrementPatchVersion.finalizedBy commitAndPushVersionChanges
+    incrementMajorVersion.finalizedBy build
+    incrementMinorVersion.finalizedBy build
+    incrementPatchVersion.finalizedBy build
+
+    build.finalizedBy commitAndPushVersionChanges
 }
+
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }

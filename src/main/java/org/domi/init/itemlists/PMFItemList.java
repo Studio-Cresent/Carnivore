@@ -14,12 +14,14 @@ public class PMFItemList {
     //default food
     public static final RegistryObject<Item> COOKED_BAT = PMFFoodItem.registerFood("cooked_bat", 4, 3.5f);
     public static final RegistryObject<Item> COOKED_BIRD = PMFFoodItem.registerFood("cooked_bird", 5, 6.8f);
+    public static final RegistryObject<Item> COOKED_CAMEL_MEAT = PMFFoodItem.registerFood("cooked_camel_meat", 8, 8.0f);
     public static final RegistryObject<Item> COOKED_RABBIT_FOOT = PMFFoodItem.registerFood("cooked_rabbit_foot", 10, 0.6f);
     public static final RegistryObject<Item> COOKED_SNIFFER_MEAT = PMFFoodItem.registerFood("cooked_sniffer_meat", 10, 15.0f);
     public static final RegistryObject<Item> COOKED_SQUID_TENTACLE = PMFFoodItem.registerFood("cooked_squid_tentacle", 4, 5.1f);
     public static final RegistryObject<Item> COOKED_TADPOLE = PMFFoodItem.registerFood("cooked_tadpole", 4, 1.4f);
     public static final RegistryObject<Item> COOKED_TURTLE = PMFFoodItem.registerFood("cooked_turtle", 7, 7.5f);
     public static final RegistryObject<Item> MYCELIUM_STEAK = PMFFoodItem.registerFood("mycelium_steak", 8, 12.8f);
+    public static final RegistryObject<Item> RAW_CAMEL_MEAT = PMFFoodItem.registerFood("raw_camel_meat", 3, 1.9f);
     public static final RegistryObject<Item> RAW_SNIFFER_MEAT = PMFFoodItem.registerFood("raw_sniffer_meat", 5, 2.0f);
     public static final RegistryObject<Item> RAW_TURTLE = PMFFoodItem.registerFood("raw_turtle", 3, 1.8f);
     public static final RegistryObject<Item> SALMON_ROE = PMFFoodItem.registerFood("salmon_roe", 1, 2.0f);

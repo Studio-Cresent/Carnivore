@@ -1,6 +1,7 @@
 package org.domi;
 
 
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.domi.events.PMFEventHandler;
 import org.domi.init.itemlists.PMFItemList;
+import org.domi.init.itemlists.PMFRecipeList;
 
 
 @Mod(PMF.MODID)
@@ -29,7 +31,16 @@ public class PMF {
         PMFCreativeTab.initialize(eventBus);
         PMFEventHandler.register(eventBus);
         eventBus.addListener(PMFCreativeTab::addItemsToTabs);
+        eventBus.addListener(this::gatherData);
     }
+
+    private void gatherData(GatherDataEvent event) {
+        var generator = event.getGenerator();
+        var existingFileHelper = event.getExistingFileHelper();
+
+        generator.addProvider(event.includeServer(), new PMFRecipeList(generator));
+    }
+
 
     //블럭 렌더링용 ㅇㅇ
     private void doClientStuff(final FMLCommonSetupEvent event){
