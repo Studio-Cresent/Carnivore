@@ -1,6 +1,7 @@
 package org.domi;
 
 
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -34,7 +35,7 @@ public class PMF {
     }
 
     private void gatherData(GatherDataEvent event) {
-        var generator = event.getGenerator();
+        DataGenerator generator = event.getGenerator();
 
         if (event.includeServer()) {
             generator.addProvider(true, new PMFRecipeList(generator));

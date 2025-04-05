@@ -164,12 +164,10 @@ public class PMFCookingRecipeBuilder {
                                              List<ItemLike> ingredients, ItemLike criterionItem) {
         ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, result, count);
 
-        // 재료 추가
         for (ItemLike ingredient : ingredients) {
             builder.requires(ingredient);
         }
 
-        // 레시피 해금 조건 및 저장
         builder.unlockedBy("has_" + getItemName(criterionItem), has(criterionItem))
                 .save(consumer);
     }
