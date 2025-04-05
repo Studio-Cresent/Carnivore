@@ -21,5 +21,7 @@
   "item.carnivore.salmon_roe": "サーモン卵",
   "item.carnivore.frogspawn": "カエルの卵",
   "item.carnivore.squid_eyeball": "イカの目",
+  "item.carnivore.raw_camel_meat": "生キャメル肉",
+  "item.carnivore.cooked_camel_meat": "焼きキャメル肉",
   "carnivore:carnivore_icon_item": "開発者にいいjpopをおすすめしてください"
 }

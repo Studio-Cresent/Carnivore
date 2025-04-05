@@ -21,5 +21,7 @@
   "item.carnivore.salmon_roe": "鲑鱼卵",
   "item.carnivore.frogspawn": "蛙卵",
   "item.carnivore.squid_eyeball": "鱿鱼眼球",
+  "item.carnivore.raw_camel_meat": "生骆驼肉",
+  "item.carnivore.cooked_camel_meat": "烤骆驼肉",
   "carnivore:carnivore_icon_item": "666你能找到这个？真6"
 }

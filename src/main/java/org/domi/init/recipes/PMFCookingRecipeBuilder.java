@@ -196,7 +196,7 @@ public class PMFCookingRecipeBuilder {
         createSmeltingRecipe(consumer, ingredient, result, experience, smeltingTime);
         createCampfireRecipe(consumer, ingredient, result, experience, campfireTime);
         createSmokingRecipe(consumer, ingredient, result, experience, smokingTime);
-        createBlastingRecipe(consumer, ingredient, result, experience, blastingTime);
+//        createBlastingRecipe(consumer, ingredient, result, experience, blastingTime);
     }
 
     /**

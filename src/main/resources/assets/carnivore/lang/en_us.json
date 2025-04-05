@@ -21,5 +21,7 @@
   "item.carnivore.salmon_roe": "Salmon Roe",
   "item.carnivore.frogspawn": "Frogspawn",
   "item.carnivore.squid_eyeball": "Squid Eyeball",
+  "item.carnivore.raw_camel_meat": "Raw Camel Meat",
+  "item.carnivore.cooked_camel_meat": "Cooked Camel Meat",
   "carnivore:carnivore_icon_item": "Easter Egg!!!"
 }

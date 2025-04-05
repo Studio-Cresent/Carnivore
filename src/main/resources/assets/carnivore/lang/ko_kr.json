@@ -21,5 +21,7 @@
   "item.carnivore.salmon_roe": "연어 알",
   "item.carnivore.frogspawn": "개구리 알",
   "item.carnivore.squid_eyeball": "오징어 눈알",
+  "item.carnivore.raw_camel_meat": "익히지 않은 낙타 고기",
+  "item.carnivore.cooked_camel_meat": "익힌 낙타 고기",
   "carnivore:carnivore_icon_item": "이야 이걸 찾네요 ㅋㅋㅋ"
 }

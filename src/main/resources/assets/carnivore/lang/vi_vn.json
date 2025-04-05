@@ -21,5 +21,7 @@
   "item.carnivore.salmon_roe": "Trứng cá hồi",
   "item.carnivore.frogspawn": "Trứng ếch",
   "item.carnivore.squid_eyeball": "Mắt mực",
+  "item.carnivore.raw_camel_meat": "Thịt lạc đà sống",
+  "item.carnivore.cooked_camel_meat": "Thịt lạc đà nướng",
   "carnivore:carnivore_icon_item" : "Phở Việt Nam ngon quá!"
 }
