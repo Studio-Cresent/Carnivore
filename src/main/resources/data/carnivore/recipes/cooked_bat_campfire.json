@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-    "ingredient": {
-      "item": "carnivore:raw_bat"
-    },
-    "result": "carnivore:cooked_bat",
-    "experience": 0.35,
-    "cookingtime": 600
-}
