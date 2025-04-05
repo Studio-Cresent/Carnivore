@@ -210,7 +210,7 @@ tasks.named('jar', Jar).configure {
     finalizedBy 'reobfJar'
 }
 
-task _incrementMajorVersion {
+task incrementMajorVersion {
     doLast {
         // 현재 properties 파일 읽기
         Properties props = new Properties()
@@ -236,7 +236,7 @@ task _incrementMajorVersion {
     }
 }
 
-task _incrementMinorVersion {
+task incrementMinorVersion {
     doLast {
         // 현재 properties 파일 읽기
         Properties props = new Properties()
@@ -263,7 +263,7 @@ task _incrementMinorVersion {
     }
 }
 
-task _incrementPatchVersion {
+task incrementPatchVersion {
     doLast {
         // 현재 properties 파일 읽기
         Properties props = new Properties()
@@ -361,9 +361,9 @@ task commitAndPushVersionChanges {
 }
 
 if (!System.getenv('JENKINS_URL')) {
-    _incrementMajorVersion.finalizedBy build
-    _incrementMinorVersion.finalizedBy build
-    _incrementPatchVersion.finalizedBy build
+    incrementMajorVersion.finalizedBy build
+    incrementMinorVersion.finalizedBy build
+    incrementPatchVersion.finalizedBy build
 
     build.finalizedBy commitAndPushVersionChanges
 }
