@@ -37,9 +37,10 @@ public class PMF {
     private void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
 
-        if (event.includeServer()) {
-            generator.addProvider(true, new PMFRecipeList(generator));
-        }
+        generator.addProvider(
+                event.includeServer(),
+                new PMFRecipeList(generator)
+        );
 
     }
 
