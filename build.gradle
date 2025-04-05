@@ -230,7 +230,7 @@ task incrementMajorVersion {
 
         // properties 파일 업데이트
         props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), null)
+        props.store(propsFile.newWriter(), "")
 
         println "메인 버전이 증가되었습니다: ${newVersion}"
     }
@@ -257,7 +257,7 @@ task incrementMinorVersion {
 
         // properties 파일 업데이트
         props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), null)
+        props.store(propsFile.newWriter(), "")
 
         println "마이너 버전이 증가되었습니다: ${newVersion}"
     }
@@ -285,7 +285,7 @@ task incrementPatchVersion {
 
         // properties 파일 업데이트
         props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), null)
+        props.store(propsFile.newWriter(), "")
 
         println "패치 버전이 증가되었습니다: ${newVersion}"
     }
