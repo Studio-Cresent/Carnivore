@@ -22,7 +22,7 @@ import org.domi.init.block.PMFBlock;
 
 import java.util.function.Supplier;
 
-public class ConsumableBlock extends PMFBlock {
+public class PMFConsumableBlock extends PMFBlock {
     public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 4);
     private final Supplier<Item> clickItem;
     private final Supplier<Item> returnItem;
@@ -36,7 +36,7 @@ public class ConsumableBlock extends PMFBlock {
     protected static final VoxelShape SHAPE_BITE_3 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 4.0D);
     protected static final VoxelShape SHAPE_BITE_4 = Block.box(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D); // 거의 다 먹은 상태
 
-    public ConsumableBlock(Properties properties, Supplier<Item> returnItem, Supplier<Item> clickItem, boolean dropBlockWhenFull) {
+    public PMFConsumableBlock(Properties properties, Supplier<Item> returnItem, Supplier<Item> clickItem, boolean dropBlockWhenFull) {
         super(properties);
         this.returnItem = returnItem;
         this.clickItem = clickItem;
@@ -67,7 +67,7 @@ public class ConsumableBlock extends PMFBlock {
     }
 
     public static RegistryObject<Block> registerConsumableBlock(String name, Properties properties, Supplier<Item> returnItem, Supplier<Item> clickItem, boolean dropBlockWhenFull) {
-        return PMFBlock.BLOCKS.register(name, () -> new ConsumableBlock(properties, returnItem, clickItem, dropBlockWhenFull));
+        return PMFBlock.BLOCKS.register(name, () -> new PMFConsumableBlock(properties, returnItem, clickItem, dropBlockWhenFull));
     }
 
     @Override
