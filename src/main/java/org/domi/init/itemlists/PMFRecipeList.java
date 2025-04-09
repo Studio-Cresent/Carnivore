@@ -58,6 +58,13 @@ public class PMFRecipeList extends RecipeProvider {
                 0.35f,
                 200);
 
+        //낙타
+        PMFCookingRecipeBuilder.registerAllCookingRecipe(
+                PMFItemList.RAW_CAMEL_MEAT.get(),
+                PMFItemList.COOKED_CAMEL_MEAT.get(),
+                0.35f,
+                200);
+
         // 토끼 발 레시피
         PMFCookingRecipeBuilder.registerAllCookingRecipe(
                 Items.RABBIT_FOOT,

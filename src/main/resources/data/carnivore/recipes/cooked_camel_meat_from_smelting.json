@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.35,
   "ingredient": {
-    "item": "carnivore:raw_axolotl"
+    "item": "carnivore:raw_camel_meat"
   },
-  "result": "carnivore:cooked_axolotl"
+  "result": "carnivore:cooked_camel_meat"
 }
