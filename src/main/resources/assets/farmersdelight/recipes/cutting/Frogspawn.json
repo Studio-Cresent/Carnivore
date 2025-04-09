@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "carnivore:frogspawn"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "minecraft:frogspawn"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}
