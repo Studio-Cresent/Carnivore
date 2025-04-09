@@ -23,5 +23,12 @@
   "item.carnivore.squid_eyeball": "イカの目",
   "item.carnivore.raw_camel_meat": "生キャメル肉",
   "item.carnivore.cooked_camel_meat": "焼きキャメル肉",
+  "item.carnivore.raw_axolotl": "生ウーパールーパー",
+  "item.carnivore.cooked_axolotl": "焼きウーパールーパー",
+  "item.carnivore.raw_horse_meat": "生馬肉",
+  "item.carnivore.horse_meat_steak": "馬肉ステーキ",
+  "item.carnivore.raw_whale_meat": "生クジラ肉",
+  "item.carnivore.cooked_whale_meat": "焼きクジラ肉",
+  "item.carnivore.silverfish": "シルバーフィッシュ",
   "carnivore:carnivore_icon_item": "開発者にいいjpopをおすすめしてください"
 }

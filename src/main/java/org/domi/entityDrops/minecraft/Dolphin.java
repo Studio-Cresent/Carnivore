@@ -4,23 +4,19 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.domi.entityDrops.EntityDropUtil;
-import org.domi.entityDrops.KnifeKillDetector;
 import org.domi.init.itemlists.PMFItemList;
 
-public class Squid {
+public class Dolphin {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
         LivingEntity entity = event.getEntity();
 
-        boolean isKnifeKill = KnifeKillDetector.isKilledByKnife(event);
         boolean isFireKill = entity.isOnFire() || event.getSource().is(net.minecraft.tags.DamageTypeTags.IS_FIRE);
 
-        if (isKnifeKill || "minecraft:squid".equals(entity.getType().getDescriptionId())) {
-            if (!isFireKill) {
-                EntityDropUtil.entityDrop(event, "minecraft:squid", PMFItemList.SQUID_TENTACLE, 1, 2);
-            } else {
-                EntityDropUtil.entityDrop(event, "minecraft:squid", PMFItemList.COOKED_SQUID_TENTACLE, 1, 2);
-            }
+        if (!isFireKill) {
+            EntityDropUtil.entityDrop(event, "minecraft:dolphin", PMFItemList.RAW_WHALE_MEAT, 1, 1);
+        } else {
+            EntityDropUtil.entityDrop(event, "minecraft:dolphin", PMFItemList.COOKED_WHALE_MEAT, 1, 1);
         }
     }
 }

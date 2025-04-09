@@ -23,5 +23,12 @@
   "item.carnivore.squid_eyeball": "오징어 눈알",
   "item.carnivore.raw_camel_meat": "익히지 않은 낙타 고기",
   "item.carnivore.cooked_camel_meat": "익힌 낙타 고기",
-  "carnivore:carnivore_icon_item": "이야 이걸 찾네요 ㅋㅋㅋ"
+  "carnivore:carnivore_icon_item": "이야 이걸 찾네요 ㅋㅋㅋ",
+  "item.carnivore.raw_axolotl": "익히지 않은 아홀로틀",
+  "item.carnivore.cooked_axolotl": "익힌 아홀로틀",
+  "item.carnivore.raw_horse_meat": "익히지 않은 말고기",
+  "item.carnivore.horse_meat_steak": "말고기 스테이크",
+  "item.carnivore.raw_whale_meat": "익히지 않은 고래고기",
+  "item.carnivore.cooked_whale_meat": "익힌 고래고기",
+  "item.carnivore.silverfish": "좀벌레"
 }

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "carnivore:raw_whale_meat"
+  },
+  "result": "carnivore:cooked_whale_meat"
+}

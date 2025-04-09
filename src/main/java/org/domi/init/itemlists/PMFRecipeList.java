@@ -92,6 +92,28 @@ public class PMFRecipeList extends RecipeProvider {
                 PMFItemList.MYCELIUM_STEAK.get(),
                 0.35f,
                 200);
+
+        // 아홀로틀 레시피
+        PMFCookingRecipeBuilder.registerAllCookingRecipe(
+                PMFItemList.RAW_AXOLOTL.get(),
+                PMFItemList.COOKED_AXOLOTL.get(),
+                0.35f,
+                200);
+
+        // 말고기 스테이크 레시피
+        PMFCookingRecipeBuilder.registerAllCookingRecipe(
+                PMFItemList.RAW_HORSE_MEAT.get(),
+                PMFItemList.HORSE_MEAT_STEAK.get(),
+                0.35f,
+                200);
+
+        // 고래 고기 레시피
+        PMFCookingRecipeBuilder.registerAllCookingRecipe(
+                PMFItemList.RAW_WHALE_MEAT.get(),
+                PMFItemList.COOKED_WHALE_MEAT.get(),
+                0.35f,
+                200);
+
     }
 
     /**
@@ -109,6 +131,17 @@ public class PMFRecipeList extends RecipeProvider {
                 1,
                 goldenSquidIngredients,
                 PMFItemList.GLOW_SQUID_TENTACLE.get()
+        );
+
+        List<ItemLike> frogSpawnIngredients = new ArrayList<>();
+        frogSpawnIngredients.add(Items.FROGSPAWN);
+        frogSpawnIngredients.add(Items.FROGSPAWN);
+
+        PMFCookingRecipeBuilder.registerShapelessRecipe(
+                PMFItemList.FROGSPAWN.get(),
+                1,
+                frogSpawnIngredients,
+                Items.FROGSPAWN  // 레시피북에 표시될 아이템
         );
 
     }

@@ -23,5 +23,12 @@
   "item.carnivore.squid_eyeball": "Mắt mực",
   "item.carnivore.raw_camel_meat": "Thịt lạc đà sống",
   "item.carnivore.cooked_camel_meat": "Thịt lạc đà nướng",
+  "item.carnivore.raw_axolotl": "Axolotl sống",
+  "item.carnivore.cooked_axolotl": "Axolotl nướng",
+  "item.carnivore.raw_horse_meat": "Thịt ngựa sống",
+  "item.carnivore.horse_meat_steak": "Bít tết thịt ngựa",
+  "item.carnivore.raw_whale_meat": "Thịt cá voi sống",
+  "item.carnivore.cooked_whale_meat": "Thịt cá voi nướng",
+  "item.carnivore.silverfish": "Bọ bạc",
   "carnivore:carnivore_icon_item" : "Phở Việt Nam ngon quá!"
 }

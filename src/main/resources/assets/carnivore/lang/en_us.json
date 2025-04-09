@@ -23,5 +23,13 @@
   "item.carnivore.squid_eyeball": "Squid Eyeball",
   "item.carnivore.raw_camel_meat": "Raw Camel Meat",
   "item.carnivore.cooked_camel_meat": "Cooked Camel Meat",
-  "carnivore:carnivore_icon_item": "Easter Egg!!!"
+  "carnivore:carnivore_icon_item": "Easter Egg!!!",
+  "item.carnivore.raw_axolotl": "Raw Axolotl",
+  "item.carnivore.cooked_axolotl": "Cooked Axolotl",
+  "item.carnivore.raw_horse_meat": "Raw Horse Meat",
+  "item.carnivore.horse_meat_steak": "Horse Meat Steak",
+  "item.carnivore.raw_whale_meat": "Raw Whale Meat",
+  "item.carnivore.cooked_whale_meat": "Cooked Whale Meat",
+  "item.carnivore.silverfish": "Silverfish"
+
 }

@@ -23,5 +23,12 @@
   "item.carnivore.squid_eyeball": "鱿鱼眼球",
   "item.carnivore.raw_camel_meat": "生骆驼肉",
   "item.carnivore.cooked_camel_meat": "烤骆驼肉",
+  "item.carnivore.raw_axolotl": "生娃娃鱼肉",
+  "item.carnivore.cooked_axolotl": "烤娃娃鱼肉",
+  "item.carnivore.raw_horse_meat": "生马肉",
+  "item.carnivore.horse_meat_steak": "烤马排",
+  "item.carnivore.raw_whale_meat": "生鲸鱼肉",
+  "item.carnivore.cooked_whale_meat": "烤鲸鱼肉",
+  "item.carnivore.silverfish": "蠹虫",
   "carnivore:carnivore_icon_item": "666你能找到这个？真6"
 }

@@ -12,6 +12,8 @@ import static org.domi.init.items.PMFItem.ITEMS;
 
 public class PMFItemList {
     //default food
+    public static final RegistryObject<Item> RAW_AXOLOTL = PMFFoodItem.registerFood("raw_axolotl", 2, 1.0f);
+    public static final RegistryObject<Item> COOKED_AXOLOTL = PMFFoodItem.registerFood("cooked_axolotl", 6, 6.0f);
     public static final RegistryObject<Item> COOKED_BAT = PMFFoodItem.registerFood("cooked_bat", 4, 3.5f);
     public static final RegistryObject<Item> COOKED_BIRD = PMFFoodItem.registerFood("cooked_bird", 5, 6.8f);
     public static final RegistryObject<Item> COOKED_CAMEL_MEAT = PMFFoodItem.registerFood("cooked_camel_meat", 8, 8.0f);
@@ -20,11 +22,16 @@ public class PMFItemList {
     public static final RegistryObject<Item> COOKED_SQUID_TENTACLE = PMFFoodItem.registerFood("cooked_squid_tentacle", 4, 5.1f);
     public static final RegistryObject<Item> COOKED_TADPOLE = PMFFoodItem.registerFood("cooked_tadpole", 4, 1.4f);
     public static final RegistryObject<Item> COOKED_TURTLE = PMFFoodItem.registerFood("cooked_turtle", 7, 7.5f);
+    public static final RegistryObject<Item> RAW_HORSE_MEAT = PMFFoodItem.registerFood("raw_horse_meat", 3, 2.0f);
+    public static final RegistryObject<Item> HORSE_MEAT_STEAK = PMFFoodItem.registerFood("horse_meat_steak", 9, 8.5f);
     public static final RegistryObject<Item> MYCELIUM_STEAK = PMFFoodItem.registerFood("mycelium_steak", 8, 12.8f);
+    public static final RegistryObject<Item> RAW_WHALE_MEAT = PMFFoodItem.registerFood("raw_whale_meat", 4, 0.5f);
+    public static final RegistryObject<Item> COOKED_WHALE_MEAT = PMFFoodItem.registerFood("cooked_whale_meat", 9, 6.0f);
     public static final RegistryObject<Item> RAW_CAMEL_MEAT = PMFFoodItem.registerFood("raw_camel_meat", 3, 1.9f);
     public static final RegistryObject<Item> RAW_SNIFFER_MEAT = PMFFoodItem.registerFood("raw_sniffer_meat", 5, 2.0f);
     public static final RegistryObject<Item> RAW_TURTLE = PMFFoodItem.registerFood("raw_turtle", 3, 1.8f);
     public static final RegistryObject<Item> SALMON_ROE = PMFFoodItem.registerFood("salmon_roe", 1, 2.0f);
+    public static final RegistryObject<Item> SILVERFISH = PMFFoodItem.registerFood("silverfish", 2, 0.5f);
     public static final RegistryObject<Item> SQUID_TENTACLE = PMFFoodItem.registerFood("squid_tentacle", 2, 1.0f);
     public static final RegistryObject<Item> STRIDER_MEAT = PMFFoodItem.registerFood("strider_meat", 2, 1.0f);
 
