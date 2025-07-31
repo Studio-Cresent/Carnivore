@@ -183,6 +183,7 @@ dependencies {
 // When "copyIdeResources" is enabled, this will also run before the game launches in IDE environments.
 // See https://docs.gradle.org/current/dsl/org.gradle.language.jvm.tasks.ProcessResources.html
 tasks.named('processResources', ProcessResources).configure {
+    duplicatesStrategy = 'exclude'
     var replaceProperties = [
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
             forge_version: forge_version, forge_version_range: forge_version_range,
@@ -215,163 +216,162 @@ tasks.named('jar', Jar).configure {
     finalizedBy 'reobfJar'
 }
 
-task incrementMajorVersion {
-    doLast {
-        // 현재 properties 파일 읽기
-        Properties props = new Properties()
-        File propsFile = file('gradle.properties')
-        props.load(propsFile.newDataInputStream())
-
-        // 현재 버전 분리하기
-        String version = props.getProperty('mod_version')
-        String[] versionParts = version.split('\\.')
-        int major = Integer.parseInt(versionParts[0])
-
-        // 메인 버전 증가, 나머지는 0으로 리셋
-        major++
-
-        // 새로운 버전 문자열 생성
-        String newVersion = "${major}.0.0"
-
-        // properties 파일 업데이트
-        props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), "")
-
-        println "메인 버전이 증가되었습니다: ${newVersion}"
-    }
-}
-
-task incrementMinorVersion {
-    doLast {
-        // 현재 properties 파일 읽기
-        Properties props = new Properties()
-        File propsFile = file('gradle.properties')
-        props.load(propsFile.newDataInputStream())
-
-        // 현재 버전 분리하기
-        String version = props.getProperty('mod_version')
-        String[] versionParts = version.split('\\.')
-        int major = Integer.parseInt(versionParts[0])
-        int minor = Integer.parseInt(versionParts[1])
-
-        // 마이너 버전 증가, 패치는 0으로 리셋
-        minor++
-
-        // 새로운 버전 문자열 생성
-        String newVersion = "${major}.${minor}.0"
-
-        // properties 파일 업데이트
-        props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), "")
-
-        println "마이너 버전이 증가되었습니다: ${newVersion}"
-    }
-}
-
-task incrementPatchVersion {
-    doLast {
-        // 현재 properties 파일 읽기
-        Properties props = new Properties()
-        File propsFile = file('gradle.properties')
-        props.load(propsFile.newDataInputStream())
-
-        // 현재 버전 분리하기
-        String version = props.getProperty('mod_version')
-        String[] versionParts = version.split('\\.')
-        int major = Integer.parseInt(versionParts[0])
-        int minor = Integer.parseInt(versionParts[1])
-        int patch = Integer.parseInt(versionParts[2])
-
-        // 패치 버전만 증가
-        patch++
-
-        // 새로운 버전 문자열 생성
-        String newVersion = "${major}.${minor}.${patch}"
-
-        // properties 파일 업데이트
-        props.setProperty('mod_version', newVersion)
-        props.store(propsFile.newWriter(), "")
-
-        println "패치 버전이 증가되었습니다: ${newVersion}"
-    }
-}
-
-task commitAndPushVersionChanges {
-    doLast {
-        // 현재 버전 가져오기
-        Properties props = new Properties()
-        File propsFile = file('gradle.properties')
-        props.load(propsFile.newDataInputStream())
-        String version = props.getProperty('mod_version')
-
-        // Git 상태 확인 (변경된 파일 목록 가져오기)
-        def statusOutput = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'status', '--porcelain'
-            standardOutput = statusOutput
-        }
-
-        def allowedPaths = [
-                '.github/workflows',
-                '.idea',
-                'gradle/wrapper',
-                'src/main',
-                'Jenkinsfile',
-                'build.gradle',
-                'gradle.properties',
-                'gradlew',
-                'gradlew.bat',
-                'settings.gradle'
-        ]
-
-        def changedFiles = statusOutput.toString().readLines()
-                .collect { line -> line.substring(3) } // git status 출력에서 파일 이름만 추출
-                .findAll { fileName ->
-                    // 지정된 파일/디렉토리에 속하는 변경사항만 포함
-                    allowedPaths.any { path ->
-                        fileName == path || // 파일 그 자체인 경우
-                                fileName.startsWith(path + '/') // 지정된 디렉토리 내부의 파일인 경우
-                    }
-                }
-
-        if (changedFiles.isEmpty()) {
-            println "커밋할 변경된 파일이 없습니다."
-            return
-        }
-
-        println "커밋할 변경 파일: ${changedFiles.join(', ')}"
-
-        // 변경된 파일 스테이징
-        changedFiles.each { fileName ->
-            exec {
-                commandLine 'git', 'add', fileName
-                ignoreExitValue true
-            }
-        }
-
-        // 커밋
-        exec {
-            commandLine 'git', 'commit', '-m', "버전 업데이트: ${version}"
-            ignoreExitValue true
-        }
-
-        // 푸시
-        exec {
-            commandLine 'git', 'push'
-            ignoreExitValue true
-        }
-
-        println "버전 ${version}에 대한 변경 사항이 커밋 및 푸시되었습니다."
-    }
-}
-
-if (!System.getenv('JENKINS_URL')) {
-    incrementMajorVersion.finalizedBy build
-    incrementMinorVersion.finalizedBy build
-    incrementPatchVersion.finalizedBy build
-
-    build.finalizedBy commitAndPushVersionChanges
-}
+//task incrementMajorVersion {
+//    doLast {
+//        // 현재 properties 파일 읽기
+//        Properties props = new Properties()
+//        File propsFile = file('gradle.properties')
+//        props.load(propsFile.newDataInputStream())
+//
+//        // 현재 버전 분리하기
+//        String version = props.getProperty('mod_version')
+//        String[] versionParts = version.split('\\.')
+//        int major = Integer.parseInt(versionParts[0])
+//
+//        // 메인 버전 증가, 나머지는 0으로 리셋
+//        major++
+//
+//        // 새로운 버전 문자열 생성
+//        String newVersion = "${major}.0.0"
+//
+//        // properties 파일 업데이트
+//        props.setProperty('mod_version', newVersion)
+//        props.store(propsFile.newWriter(), "")
+//
+//        println "메인 버전이 증가되었습니다: ${newVersion}"
+//    }
+//}
+//
+//task incrementMinorVersion {
+//    doLast {
+//        // 현재 properties 파일 읽기
+//        Properties props = new Properties()
+//        File propsFile = file('gradle.properties')
+//        props.load(propsFile.newDataInputStream())
+//
+//        // 현재 버전 분리하기
+//        String version = props.getProperty('mod_version')
+//        String[] versionParts = version.split('\\.')
+//        int major = Integer.parseInt(versionParts[0])
+//        int minor = Integer.parseInt(versionParts[1])
+//
+//        // 마이너 버전 증가, 패치는 0으로 리셋
+//        minor++
+//
+//        // 새로운 버전 문자열 생성
+//        String newVersion = "${major}.${minor}.0"
+//
+//        // properties 파일 업데이트
+//        props.setProperty('mod_version', newVersion)
+//        props.store(propsFile.newWriter(), "")
+//
+//        println "마이너 버전이 증가되었습니다: ${newVersion}"
+//    }
+//}
+//
+//task incrementPatchVersion {
+//    doLast {
+//        // 현재 properties 파일 읽기
+//        Properties props = new Properties()
+//        File propsFile = file('gradle.properties')
+//        props.load(propsFile.newDataInputStream())
+//
+//        // 현재 버전 분리하기
+//        String version = props.getProperty('mod_version')
+//        String[] versionParts = version.split('\\.')
+//        int major = Integer.parseInt(versionParts[0])
+//        int minor = Integer.parseInt(versionParts[1])
+//        int patch = Integer.parseInt(versionParts[2])
+//
+//        // 패치 버전만 증가
+//        patch++
+//
+//        // 새로운 버전 문자열 생성
+//        String newVersion = "${major}.${minor}.${patch}"
+//
+//        // properties 파일 업데이트
+//        props.setProperty('mod_version', newVersion)
+//        props.store(propsFile.newWriter(), "")
+//
+//        println "패치 버전이 증가되었습니다: ${newVersion}"
+//    }
+//}
+//
+//task commitAndPushVersionChanges {
+//    doLast {
+//        // 현재 버전 가져오기
+//        Properties props = new Properties()
+//        File propsFile = file('gradle.properties')
+//        props.load(propsFile.newDataInputStream())
+//        String version = props.getProperty('mod_version')
+//
+//        // Git 상태 확인 (변경된 파일 목록 가져오기)
+//        def statusOutput = new ByteArrayOutputStream()
+//        exec {
+//            commandLine 'git', 'status', '--porcelain'
+//            standardOutput = statusOutput
+//        }
+//
+//        def allowedPaths = [
+//                '.github/workflows',
+//                '.idea',
+//                'gradle/wrapper',
+//                'src/main',
+//                'build.gradle',
+//                'gradle.properties',
+//                'gradlew',
+//                'gradlew.bat',
+//                'settings.gradle'
+//        ]
+//
+//        def changedFiles = statusOutput.toString().readLines()
+//                .collect { line -> line.substring(3) } // git status 출력에서 파일 이름만 추출
+//                .findAll { fileName ->
+//                    // 지정된 파일/디렉토리에 속하는 변경사항만 포함
+//                    allowedPaths.any { path ->
+//                        fileName == path || // 파일 그 자체인 경우
+//                                fileName.startsWith(path + '/') // 지정된 디렉토리 내부의 파일인 경우
+//                    }
+//                }
+//
+//        if (changedFiles.isEmpty()) {
+//            println "커밋할 변경된 파일이 없습니다."
+//            return
+//        }
+//
+//        println "커밋할 변경 파일: ${changedFiles.join(', ')}"
+//
+//        // 변경된 파일 스테이징
+//        changedFiles.each { fileName ->
+//            exec {
+//                commandLine 'git', 'add', fileName
+//                ignoreExitValue true
+//            }
+//        }
+//
+//        // 커밋
+//        exec {
+//            commandLine 'git', 'commit', '-m', "버전 업데이트: ${version}"
+//            ignoreExitValue true
+//        }
+//
+//        // 푸시
+//        exec {
+//            commandLine 'git', 'push'
+//            ignoreExitValue true
+//        }
+//
+//        println "버전 ${version}에 대한 변경 사항이 커밋 및 푸시되었습니다."
+//    }
+//}
+//
+//if (!System.getenv('JENKINS_URL')) {
+//    incrementMajorVersion.finalizedBy build
+//    incrementMinorVersion.finalizedBy build
+//    incrementPatchVersion.finalizedBy build
+//
+//    build.finalizedBy commitAndPushVersionChanges
+//}
 
 
 tasks.withType(JavaCompile).configureEach {

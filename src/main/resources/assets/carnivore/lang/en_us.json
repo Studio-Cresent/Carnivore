@@ -1,4 +1,4 @@
-﻿{
+{
   "itemGroup.carnivore.carnivore_tab": "Carnivore",
   "item.carnivore.raw_mycelium_beef": "Raw Mycelium Beef",
   "item.carnivore.mycelium_steak": "Mycelium Steak",
@@ -30,6 +30,8 @@
   "item.carnivore.horse_meat_steak": "Horse Meat Steak",
   "item.carnivore.raw_whale_meat": "Raw Whale Meat",
   "item.carnivore.cooked_whale_meat": "Cooked Whale Meat",
-  "item.carnivore.silverfish": "Silverfish"
+  "item.carnivore.silverfish": "Silverfish",
+  "item.carnivore.mite_chunk": "Mite Chunk",
+  "item.carnivore.cooked_mite_chunk": "Cooked Mite Chunk"
 
 }

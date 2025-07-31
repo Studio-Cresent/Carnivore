@@ -30,5 +30,7 @@
   "item.carnivore.raw_whale_meat": "生クジラ肉",
   "item.carnivore.cooked_whale_meat": "焼きクジラ肉",
   "item.carnivore.silverfish": "シルバーフィッシュ",
+  "item.carnivore.mite_chunk": "エンダーマイトの塊",
+  "item.carnivore.cooked_mite_chunk": "調理済みエンダーマイトの塊",
   "carnivore:carnivore_icon_item": "開発者にいいjpopをおすすめしてください"
 }

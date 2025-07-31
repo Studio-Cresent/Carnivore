@@ -121,6 +121,13 @@ public class PMFRecipeList extends RecipeProvider {
                 0.35f,
                 200);
 
+        // 엔더마이트 덩어리 레시피
+        PMFCookingRecipeBuilder.registerAllCookingRecipe(
+                PMFItemList.MITE_CHUNK.get(),
+                PMFItemList.COOKED_MITE_CHUNK.get(),
+                0.35f,
+                200);
+
     }
 
     /**

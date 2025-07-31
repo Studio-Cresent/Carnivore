@@ -34,6 +34,8 @@ public class PMFItemList {
     public static final RegistryObject<Item> SILVERFISH = PMFFoodItem.registerFood("silverfish", 2, 0.5f);
     public static final RegistryObject<Item> SQUID_TENTACLE = PMFFoodItem.registerFood("squid_tentacle", 2, 1.0f);
     public static final RegistryObject<Item> STRIDER_MEAT = PMFFoodItem.registerFood("strider_meat", 2, 1.0f);
+    public static final RegistryObject<Item> MITE_CHUNK = PMFFoodItem.registerTeleportingFood("mite_chunk", 1, 0.0f);
+    public static final RegistryObject<Item> COOKED_MITE_CHUNK = PMFFoodItem.registerFood("cooked_mite_chunk", 4, 0.3f);
 
     // 효과가 있는 음식 (알파벳순)
     public static final RegistryObject<Item> FROGSPAWN = PMFFoodItem.registerFoodWithEffect(

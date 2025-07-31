@@ -1,9 +1,0 @@
-﻿{
-  "variants": {
-    "bites=0": { "model": "carnivore:block/snowhead1" },
-    "bites=1": { "model": "carnivore:block/snowhead2" },
-    "bites=2": { "model": "carnivore:block/snowhead3" },
-    "bites=3": { "model": "carnivore:block/snowhead4" },
-    "bites=4": { "model": "carnivore:block/snowhead5" }
-  }
-}
