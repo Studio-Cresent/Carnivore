@@ -29,6 +29,8 @@ public class PMFRecipeList extends RecipeProvider {
         // 조합대 레시피 등록
         registerCraftingRecipes();
 
+        registerCookingPotRecipes();
+
         // 등록된 모든 레시피 생성
         PMFCookingRecipeBuilder.buildAllRecipes(consumer);
     }
@@ -158,6 +160,26 @@ public class PMFRecipeList extends RecipeProvider {
                 frogSpawnIngredients,
                 Items.FROGSPAWN  // 레시피북에 표시될 아이템
         );
+    }
 
+    private void registerCookingPotRecipes(){
+        PMFCookingRecipeBuilder.registerCookingPotRecipe(
+                PMFItemList.INSECT_POWDER.get(), // 완성된 요리 (예시)
+                Items.BOWL,                      // 다 먹고 남는 용기 (그릇, 유리병 등. 없으면 null)
+                100,                             // 요리 시간 (200틱 = 10초)
+                1.0f,                            // 획득 경험치
+                PMFItemList.SILVERFISH.get(),
+                PMFItemList.SILVERFISH.get(),
+                Items.SUGAR
+        );
+        PMFCookingRecipeBuilder.registerCookingPotRecipe(
+                PMFItemList.HORSE_MINCE.get(),
+                Items.BOWL,
+                200,
+                1.0f,
+                PMFItemList.RAW_HORSE_MEAT.get(),
+                PMFItemList.RAW_HORSE_MEAT.get(),
+                PMFItemList.RAW_HORSE_MEAT.get()
+        );
     }
 }

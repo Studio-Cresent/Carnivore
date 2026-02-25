@@ -38,7 +38,7 @@ public class PMFEventHandler {
         MinecraftForge.EVENT_BUS.register(new Strider());
         MinecraftForge.EVENT_BUS.register(new Tadpole());
         MinecraftForge.EVENT_BUS.register(new Turtle());
-        MinecraftForge.EVENT_BUS.register(new Endermite());
+//        MinecraftForge.EVENT_BUS.register(new Endermite());
     }
     public static void register(IEventBus modEventBus) {
         registerModEvents(modEventBus);
