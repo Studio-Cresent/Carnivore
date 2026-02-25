@@ -143,10 +143,10 @@ public class PMFCookingRecipeBuilder {
                 createAllCookingRecipes(consumer, recipe.ingredient, recipe.result, recipe.experience,
                         recipe.smeltingTime, recipe.campfireTime, recipe.smokingTime, recipe.blastingTime);
             } else {
-                // 화로 레시피만 등록
                 createSmeltingRecipe(consumer, recipe.ingredient, recipe.result, recipe.experience, recipe.smeltingTime);
             }
         }
+        RECIPES.clear();
     }
 
     /**

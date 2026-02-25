@@ -36,6 +36,8 @@ public class PMFItemList {
     public static final RegistryObject<Item> STRIDER_MEAT = PMFFoodItem.registerFood("strider_meat", 2, 1.0f);
     public static final RegistryObject<Item> MITE_CHUNK = PMFFoodItem.registerTeleportingFood("mite_chunk", 1, 0.0f);
     public static final RegistryObject<Item> COOKED_MITE_CHUNK = PMFFoodItem.registerFood("cooked_mite_chunk", 4, 0.3f);
+    public static final RegistryObject<Item> GUARDIAN_MEAT = PMFFoodItem.registerFood("guardian_meat", 4, 0.3f);
+
 
     // 효과가 있는 음식 (알파벳순)
     public static final RegistryObject<Item> FROGSPAWN = PMFFoodItem.registerFoodWithEffect(
@@ -67,6 +69,15 @@ public class PMFItemList {
             new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 1.0f
     );
 
+    public static final RegistryObject<Item> GUARDIAN_EYE = PMFFoodItem.registerFoodWithEffect(
+            "guardian_eye", 3, 2.4f,
+            new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 6000, 2), 1.0f
+    );
+
+    public static final RegistryObject<Item> HORSE_MINCE = PMFFoodItem.registerFoodWithEffect("horse_mince", 16, 14.3f,
+            new MobEffectInstance(MobEffects.JUMP, 2400, 7200), 0.5f
+    );
+
     // 다중 효과 음식 (알파벳순)
     public static final RegistryObject<Item> GOLDEN_SQUID_TENTACLE = PMFFoodItem.registerFoodWithMultipleEffects(
             "golden_squid_tentacle", 4, 9.0f,
@@ -74,6 +85,10 @@ public class PMFItemList {
             new MobEffectInstance(MobEffects.ABSORPTION, 2400, 1)
     );
 
+    public static final RegistryObject<Item> INSECT_POWDER = PMFFoodItem.registerFoodWithMultipleEffects("insect_powder", 5, 3f,
+            new MobEffectInstance(MobEffects.WEAKNESS, 3600, 2),
+            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 3)
+    );
 
     //logo
     public static final RegistryObject<Item> TAB_ICON_ITEM = ITEMS.register("tab_icon_item", () -> new Item(new Item.Properties()));

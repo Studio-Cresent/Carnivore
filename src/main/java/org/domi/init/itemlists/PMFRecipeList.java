@@ -114,6 +114,7 @@ public class PMFRecipeList extends RecipeProvider {
                 0.35f,
                 200);
 
+
         // 고래 고기 레시피
         PMFCookingRecipeBuilder.registerAllCookingRecipe(
                 PMFItemList.RAW_WHALE_MEAT.get(),
