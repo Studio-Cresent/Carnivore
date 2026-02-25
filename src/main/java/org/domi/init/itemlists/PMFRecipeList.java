@@ -30,6 +30,7 @@ public class PMFRecipeList extends RecipeProvider {
         registerCraftingRecipes();
 
         registerCookingPotRecipes();
+        registerCuttingBoardRecipes();
 
         // 등록된 모든 레시피 생성
         PMFCookingRecipeBuilder.buildAllRecipes(consumer);
@@ -159,6 +160,15 @@ public class PMFRecipeList extends RecipeProvider {
                 1,
                 frogSpawnIngredients,
                 Items.FROGSPAWN  // 레시피북에 표시될 아이템
+        );
+    }
+
+    private void registerCuttingBoardRecipes() {
+        PMFCookingRecipeBuilder.registerCuttingRecipe(
+                PMFItemList.FROGSPAWN.get(),
+                "forge:tools/knives",
+                Items.FROGSPAWN,
+                2
         );
     }
 
