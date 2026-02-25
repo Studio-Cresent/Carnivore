@@ -75,7 +75,7 @@ public class PMFItemList {
     );
 
     public static final RegistryObject<Item> HORSE_MINCE = PMFFoodItem.registerFoodWithEffect("horse_mince", 16, 14.3f,
-            new MobEffectInstance(MobEffects.JUMP, 2400, 7200), 0.5f
+            new MobEffectInstance(MobEffects.JUMP, 7200, 2), 0.5f
     );
 
     // 다중 효과 음식 (알파벳순)

@@ -32,5 +32,9 @@
   "item.carnivore.silverfish": "蠹虫",
   "item.carnivore.mite_chunk": "末影螨肉块",
   "item.carnivore.cooked_mite_chunk": "熟末影螨肉块",
+  "item.carnivore.guardian_eye": "守卫者之眼",
+  "item.carnivore.guardian_meat": "守卫者肉",
+  "item.carnivore.horse_mince": "马肉馅",
+  "item.carnivore.insect_powder": "昆虫粉",
   "carnivore:carnivore_icon_item": "666你能找到这个？真6"
 }

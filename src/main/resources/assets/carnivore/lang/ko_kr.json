@@ -32,5 +32,9 @@
   "item.carnivore.cooked_whale_meat": "익힌 고래고기",
   "item.carnivore.silverfish": "좀벌레",
   "item.carnivore.mite_chunk": "엔더마이트 덩어리",
-  "item.carnivore.cooked_mite_chunk": "익힌 엔더마이트 덩어리"
+  "item.carnivore.cooked_mite_chunk": "익힌 엔더마이트 덩어리",
+  "item.carnivore.guardian_eye": "가디언의 눈",
+  "item.carnivore.guardian_meat": "가디언 살점",
+  "item.carnivore.horse_mince": "말고기 민스",
+  "item.carnivore.insect_powder": "곤충 가루",
 }

@@ -32,5 +32,9 @@
   "item.carnivore.silverfish": "Bọ bạc",
   "item.carnivore.mite_chunk": "Mảnh Endermite",
   "item.carnivore.cooked_mite_chunk": "Mảnh Endermite Đã Nấu",
+  "item.carnivore.guardian_eye": "Mắt Guardian",
+  "item.carnivore.guardian_meat": "Thịt Guardian",
+  "item.carnivore.horse_mince": "Thịt ngựa băm",
+  "item.carnivore.insect_powder": "Bột côn trùng",
   "carnivore:carnivore_icon_item" : "Phở Việt Nam ngon quá!"
 }

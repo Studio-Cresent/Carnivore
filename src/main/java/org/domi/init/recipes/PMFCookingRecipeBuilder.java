@@ -221,6 +221,15 @@ public class PMFCookingRecipeBuilder {
     // 내부 클래스: 도마 레시피 JSON 생성기
     // ---------------------------------------------------------
     private record FDCuttingRecipe(ResourceLocation id, Item ingredient, String toolTag, Item result, int resultCount, String soundEventId) implements FinishedRecipe {
+
+        // ★ 핵심 수정: 바닐라의 getType() 호출을 우회하기 위해 메서드 오버라이드
+        @Override
+        public JsonObject serializeRecipe() {
+            JsonObject json = new JsonObject();
+            this.serializeRecipeData(json);
+            return json;
+        }
+
         @Override
         public void serializeRecipeData(JsonObject json) {
             json.addProperty("type", "farmersdelight:cutting");
@@ -259,6 +268,15 @@ public class PMFCookingRecipeBuilder {
     // 내부 클래스: 요리 냄비 레시피 JSON 생성기
     // ---------------------------------------------------------
     private record FDCookingPotRecipe(ResourceLocation id, Item result, Item container, int cookingTime, float experience, Item[] ingredients) implements FinishedRecipe {
+
+        // ★ 핵심 수정: 바닐라의 getType() 호출을 우회하기 위해 메서드 오버라이드
+        @Override
+        public JsonObject serializeRecipe() {
+            JsonObject json = new JsonObject();
+            this.serializeRecipeData(json);
+            return json;
+        }
+
         @Override
         public void serializeRecipeData(JsonObject json) {
             json.addProperty("type", "farmersdelight:cooking");

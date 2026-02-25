@@ -32,6 +32,9 @@
   "item.carnivore.cooked_whale_meat": "Cooked Whale Meat",
   "item.carnivore.silverfish": "Silverfish",
   "item.carnivore.mite_chunk": "Mite Chunk",
-  "item.carnivore.cooked_mite_chunk": "Cooked Mite Chunk"
-
+  "item.carnivore.cooked_mite_chunk": "Cooked Mite Chunk",
+  "item.carnivore.guardian_eye": "Guardian Eye",
+  "item.carnivore.guardian_meat": "Guardian Meat",
+  "item.carnivore.horse_mince": "Horse Mince",
+  "item.carnivore.insect_powder": "Insect Powder"
 }

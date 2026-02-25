@@ -32,5 +32,9 @@
   "item.carnivore.silverfish": "シルバーフィッシュ",
   "item.carnivore.mite_chunk": "エンダーマイトの塊",
   "item.carnivore.cooked_mite_chunk": "調理済みエンダーマイトの塊",
+  "item.carnivore.guardian_eye": "ガーディアンの目",
+  "item.carnivore.guardian_meat": "ガーディアンの身",
+  "item.carnivore.horse_mince": "馬のひき肉",
+  "item.carnivore.insect_powder": "昆虫の粉末",
   "carnivore:carnivore_icon_item": "開発者にいいjpopをおすすめしてください"
 }
